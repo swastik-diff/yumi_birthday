@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Yumi!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sty.css">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+    <!-- Background elements -->
+    <div class="background">
+        <div id="stars"></div>
+        <div id="balloons"></div>
+        <div id="cursor-trail"></div>
+        <div id="clouds"></div>
+    </div>
+
+    <!-- Audio Control -->
+    <div class="audio-control">
+        <button id="music-toggle" aria-label="Toggle Music">
+            <span class="music-on">🔊</span>
+            <span class="music-off">🔇</span>
+        </button>
+    </div>
+
+    <section id="welcome-layout">
+        <div id="welcome">
+            <h1 class="title">Happy Birthday, Rockstar!</h1>
+            <div class="subtitle">To the girl who sings like an angel and codes like a queen!</div>
+    
+            <div class="countdown-container">
+                <div class="countdown-title">⏳ Counting down to the magic – May 6th!</div>
+                <div id="countdown" class="countdown">
+                    <div class="time-block">
+                        <span id="days">00</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-block">
+                        <span id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-block">
+                        <span id="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-block">
+                        <span id="seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id = "spline-object">
+
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+            <spline-viewer url="https://prod.spline.design/kBStnDszXLw5VpiQ/scene.splinecode"></spline-viewer>
+        </div> <br><br><br>
+
+    
+
+        <div class="scroll-indicator">
+            <span>Scroll down to unwrap your digital surprise 🎁</span>
+            <div class="arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- Birthday Cake Section -->
+    <div class="containerrr">
+        <div class="subtitled">Warmest wishes and a slice of love - enjoy this cake, a sweet gift just for you!</div>
+
+        <div class="decoration">🎂</div>
+        <div class="decoration">🎁</div>
+        <div class="decoration">🎈</div>
+        <div class="decoration">✨</div>
+        <div class="decoration">🎉</div>
+        
+        <div class="cake">
+            <div class="cake-base"></div>
+            <div class="cake-middle"></div>
+            <div class="icing"></div>
+            <div class="cake-top"></div>
+            <div class="icing-top"></div>
+            
+            <div class="candle-containerrr">
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="blow-indicator-container">
+            <div class="blow-indicator">
+                <div class="blow-strength" id="blow-meter"></div>
+            </div>
+            <div class="status-text" id="status-text">Click "Blow with Mic" to use your microphone</div>
+        </div>
+        
+        <div class="controls">
+            <button id="blow-button">Blow Candles</button>
+            <button id="blow-mic-button">Blow with Mic</button>
+            <button id="reset-button">Reset Candles</button>
+        </div>
+        
+        <div class="message" id="message">Happy Birthday! 🎉</div>
+  <!-- Gift Box Section -->
+  <div class="gift-container">
+    <div class="gift-box" id="giftBox">
+      <div class="gift-lid"></div>
+      <div class="gift-bow">🎀</div>
+      <div class="gift-ribbon-vertical"></div>
+      <div class="gift-ribbon-horizontal"></div>
+      
+      <div class="gift-paper">
+        
+        <div class="paper-content">
+            <div class="paper-decoration">• ✿ • ✿ • ✿ •</div> 
+            <h4>Hey champ! You know what? Even stars would RSVP if they knew it was your birthday </h4>
+
+           
+            <div class="paper-decoration">• ✿ • ✿ • ✿ •</div>    
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="gift-instructions">
+        Click the gift box to unlock a cute wish 🧚🎀
+    </div>
+  </div>
+   
+    <!-- 3D Rotating Image Gallery Section -->
+    <section id="gallery" class="section">
+        <h2 class="section-title yumi-heading">🎨A Stunning Gallery for You – 아름다운 유미 💕</h2><BR><BR><BR>
+            <h3 class="section-title yumi-heading">유미의 갤러리 💕</h3> 
+        <div class="gallery-container">
+            <div class="box">
+                <span style="--i:1"><img src="yumi/black.jpg"></span>
+                <span style="--i:2"><img src="yumi/blue.jpg"></span>
+                <span style="--i:3"><img src="yumi/pink.jpg"></span>
+                <span style="--i:4"><img src="yumi/red.jpg"></span>
+                <span style="--i:5"><img src="yumi/pink2.jpg"></span>
+                <span style="--i:6"><img src="yumi/black2.jpg"></span>
+                <span style="--i:7"><img src="yumi/blue2.jpg"></span>
+                <span style="--i:8"><img src="yumi/mile4.jpg"></span>
+                <span style="--i:9"><img src="yumi/red.jpg"></span>
+                <span style="--i:10"><img src="yumi/pink2.jpg"></span>
+            </div>
+        </div>
+      </section>
+      <br><Br>
+
+    <!-- Memory Lane Section -->
+    <section id="memory-lane" class="section">
+        <h2 class="section-title">Our Magical Timeline</h2>
+        <div class="timeline">
+            <!-- Timeline items will be added here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Heart Graph Section -->
+    <section id="heart-graph" class="section">
+        <h2 class="section-title"> A Heart That Beats in Binary</h2>
+        <div class="heart-container">
+            <div id="heart-canvas"></div>
+        </div>
+        <div class="heart-equation">
+            <span class="equation-label">Friendship meets logic:</span>
+            <span class="equation-text">x² + (y - ∛x²)² = 1</span>
+        </div>
+    </section>
+
+    <section id="treasure" class="section">
+        <div class="welcome-screen">
+            <h1 class="welcome-title">Welcome to the Realm of Timeless Echoes</h1>
+            <button class="enter-button">Unfold the Memories</button>
+        </div>
+    
+        <div class="main-container">
+            <div class="vintage-frame"></div>
+            <div class="particles"></div>
+            <div class="content">
+                <div class="header">
+                    <h1>Treasured Moments</h1>
+                </div>
+            </div>
+    
+            <div class="carousel-container">
+                <div class="carousel">
+                    <!-- Polaroid photos will be added here with JavaScript -->
+                </div>
+            </div>
+        </div>
+    
+        <div class="fullscreen-view">
+            <div class="fullscreen-content">
+                <img class="fullscreen-image" src="" alt="Memory">
+                <div class="caption-container">
+                    <p class="caption caption-1"></p>
+                    <p class="caption caption-2"></p>
+                    <button class="music-button">♫ Play Melody</button>
+                </div>
+                <button class="closedd-button" onclick="closeFullscreen()">×</button>
+            </div>
+            
+        </div>
+    
+        <div class="final-scene">
+            <h2 class="final-message">👑 "To the kindest heart, You walked through songs, And left memories singing forever."</h2>
+            <button class="replay-button">Replay the Journey</button>
+        </div>
+    
+        <audio id="background-music" loop>
+            <source src="/api/placeholder/400/320" type="audio/mp3">
+        </audio>
+    
+        <audio id="memory-audio">
+            <source src="" type="audio/mp3">
+        </audio>
+        </section>
+   
+        <section class="ending-section glass-effect">
+            <h2>And This... Is Just the Beginning 🌌</h2>
+            <p>
+              From barefoot laughter to bug-fixing marathons,<br>
+              from convocation giggles to evening walks —<br>
+              every memory with you has been a soft, unforgettable chapter in my life.<br><br>
+          
+              You have a heart that shines quietly — kind, beautiful, and endlessly giving.<br>
+              I’ve never told you enough, but I’m truly thankful for you — for everything you are, and everything you bring into this world.<br><br>
+          
+              This page is only a glimpse of the joy you’ve given.<br>
+              Here’s to many more memories, and all the magic yet to come. 💫<br><br>
+          
+              Happy Birthday once again — this memory lane belongs to you. 💖
+            </p>
+            <button class="final-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+              Back to the Start ✨
+            </button>
+          </section>
+          
+          
+          
+<script>
+    const giftBox = document.getElementById('giftBox');
+    const wishMessage = document.getElementById('wish-message');
+    const closeButton = document.getElementById('closeButton');
+    
+    giftBox.addEventListener('click', function() {
+      giftBox.classList.add('opened');
+      wishMessage.classList.remove('hidden');
+    });
+    
+    closeButton.addEventListener('click', function() {
+      wishMessage.classList.add('hidden');
+      giftBox.classList.remove('opened');
+    });
+
+
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const fadeElements = document.querySelectorAll('.welcome-screen');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // run only once
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(el => observer.observe(el));
+    });
+</script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="library.js"></script>
+</body>
+</html>
