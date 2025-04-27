@@ -10,7 +10,7 @@ const photos = [
 ];
 
 const memories = [
-    { date: "9th November, 2024", title: "Freshers Night", description: "We already knew each other, but that night — with your barefoot laughter and endless giggles — felt like the real beginning.", media: "yumi/freshers.jpg", type: "image" },
+    { date: "9th November, 2024", title: "Freshers Night", description: "We already knew each other, but that night — with your barefoot laughter and endless giggles — felt like the real beginning.", media: "yumi/fresh.jpg", type: "image" },
     { date: "19th January, 2025", title: "Convocation Day", description: "What started off boring turned magical beside you — photos, laughter, and memories I didn't know I needed!", media: "yumi/convocation.jpg", type: "image" },
     { date: "9th March, 2025", title: "Ecstasia", description: "I totally goofed up my outfit — but enjoyment through the night with you made it one of the best evenings ever!", media: "yumi/party2.jpg", type: "image" },
     { date: "22nd March, 2025", title: "First Workshop Together", description: "We paired up — solving bugs, laughing in between, making even code feel like a memory worth saving!", media: "yumi/py2.jpg", type: "image" },
